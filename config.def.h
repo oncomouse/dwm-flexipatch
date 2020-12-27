@@ -103,6 +103,13 @@ static char selfgcolor[]                 = "#eeeeee";
 static char selbgcolor[]                 = "#005577";
 static char selbordercolor[]             = "#005577";
 static char selfloatcolor[]              = "#005577";
+#if BAR_STATUSCOLOR_PATCH
+
+static char statusfgcolor[]              = "#bbbbbb";
+static char statusbgcolor[]              = "#222222";
+static char statusbordercolor[]          = "#444444";
+static char statusfloatcolor[]           = "#db8fd9";
+#endif
 
 static char titlenormfgcolor[]           = "#bbbbbb";
 static char titlenormbgcolor[]           = "#222222";
@@ -177,6 +184,9 @@ static const unsigned int alphas[][3] = {
 	/*                       fg      bg        border     */
 	[SchemeNorm]         = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]          = { OPAQUE, baralpha, borderalpha },
+#if BAR_STATUSCOLOR_PATCH
+	[SchemeStatus]       = { OPAQUE, baralpha, borderalpha },
+#endif
 	[SchemeTitleNorm]    = { OPAQUE, baralpha, borderalpha },
 	[SchemeTitleSel]     = { OPAQUE, baralpha, borderalpha },
 	[SchemeTagsNorm]     = { OPAQUE, baralpha, borderalpha },
@@ -227,6 +237,9 @@ static const int color_ptrs[][ColCount] = {
 	/*                       fg      bg      border  float */
 	[SchemeNorm]         = { -1,     -1,     5,      12 },
 	[SchemeSel]          = { -1,     -1,     11,     13 },
+#if BAR_STATUSCOLOR_PATCH
+	[SchemeStatus]       = { 6,      0, -1 -1 },
+#endif
 	[SchemeTitleNorm]    = { 6,      -1,     -1,     -1 },
 	[SchemeTitleSel]     = { 6,      -1,     -1,     -1 },
 	[SchemeTagsNorm]     = { 2,      0,      0,      -1 },
@@ -240,6 +253,9 @@ static char *colors[][ColCount] = {
 	/*                       fg                bg                border                float */
 	[SchemeNorm]         = { normfgcolor,      normbgcolor,      normbordercolor,      normfloatcolor },
 	[SchemeSel]          = { selfgcolor,       selbgcolor,       selbordercolor,       selfloatcolor },
+#if BAR_STATUSCOLOR_PATCH
+	[SchemeStatus]	     = { statusfgcolor,    statusbgcolor,    statusbordercolor,    statusfloatcolor },
+#endif
 	[SchemeTitleNorm]    = { titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormfloatcolor },
 	[SchemeTitleSel]     = { titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfloatcolor },
 	[SchemeTagsNorm]     = { tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfloatcolor },
@@ -288,6 +304,9 @@ static char *statuscolors[][ColCount] = {
 	/*                       fg                bg                border                float */
 	[SchemeNorm]         = { normfgcolor,      normbgcolor,      normbordercolor,      normfloatcolor },
 	[SchemeSel]          = { selfgcolor,       selbgcolor,       selbordercolor,       selfloatcolor },
+#if BAR_STATUSCOLOR_PATCH
+	[SchemeStatus]	     = { statusfgcolor,    statusbgcolor,    statusbordercolor,    statusfloatcolor },
+#endif
 	[SchemeTitleNorm]    = { titlenormfgcolor, titlenormbgcolor, titlenormbordercolor, titlenormfloatcolor },
 	[SchemeTitleSel]     = { titleselfgcolor,  titleselbgcolor,  titleselbordercolor,  titleselfloatcolor },
 	[SchemeTagsNorm]     = { tagsnormfgcolor,  tagsnormbgcolor,  tagsnormbordercolor,  tagsnormfloatcolor },

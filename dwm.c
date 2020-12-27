@@ -130,6 +130,9 @@ enum {
 enum {
 	SchemeNorm,
 	SchemeSel,
+#if BAR_STATUSCOLOR_PATCH
+	SchemeStatus,
+#endif
 	SchemeTitleNorm,
 	SchemeTitleSel,
 	SchemeTagsNorm,

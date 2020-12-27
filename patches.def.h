@@ -95,6 +95,9 @@
  */
 #define BAR_STATUSCMD_PATCH 0
 
+/* Create color scheme for the status. */
+#define BAR_STATUSCOLOR_PATCH 1
+
 /* Status2d allows colors and rectangle drawing in your dwm status bar.
  * This patch is incompatible with the statuscolors patch which takes precedence.
  * This patch is incompatible with the extrabar patch.

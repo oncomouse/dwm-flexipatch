@@ -24,6 +24,12 @@ loadxrdb()
 				XRDB_LOAD_COLOR("dwm.selbgcolor", selbgcolor);
 				XRDB_LOAD_COLOR("dwm.selbordercolor", selbordercolor);
 				XRDB_LOAD_COLOR("dwm.selfloatcolor", selfloatcolor);
+#if BAR_STATUSCOLOR_PATCH
+				XRDB_LOAD_COLOR("dwm.statusfgcolor", statusfgcolor);
+				XRDB_LOAD_COLOR("dwm.statusbgcolor", statusbgcolor);
+				XRDB_LOAD_COLOR("dwm.statusbordercolor", statusbordercolor);
+				XRDB_LOAD_COLOR("dwm.statusfloatcolor", statusfloatcolor);
+#endif
 				XRDB_LOAD_COLOR("dwm.titlenormfgcolor", titlenormfgcolor);
 				XRDB_LOAD_COLOR("dwm.titlenormbgcolor", titlenormbgcolor);
 				XRDB_LOAD_COLOR("dwm.titlenormbordercolor", titlenormbordercolor);

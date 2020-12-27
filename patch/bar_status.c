@@ -15,6 +15,9 @@ width_status_es(Bar *bar, BarArg *a)
 int
 draw_status(Bar *bar, BarArg *a)
 {
+#if BAR_STATUSCOLOR_PATCH
+	drw_setscheme(drw, scheme[SchemeStatus]);
+#endif
 	return drw_text(drw, a->x, a->y, a->w, a->h, lrpad / 2, stext, 0, True);
 }
 
